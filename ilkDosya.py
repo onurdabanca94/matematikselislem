@@ -2,6 +2,7 @@
 import random
 import time
 import math
+skor = 0
 
 while True:
     a = random.randint(1,4)
@@ -18,9 +19,13 @@ while True:
 
         if (sonuc==ilksayi+ikincisayi):
             print("Sonucu doğru bildiniz.")
+            skor = skor + 1
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
         else:
             print("Yanlış Cevap Verdiniz. Doğru Cevap :",ilksayi+ikincisayi)
+            skor = skor - 3
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
     elif a == 2:
         print("Çıkarma İşlemi ->")
@@ -31,9 +36,13 @@ while True:
 
         if (sonuc == ilksayi-ikincisayi):
             print("Tebrikler Doğru bildiniz!")
+            skor = skor + 1
+            print("Mevcut skorunuz :",skor)
             time.sleep(2)
         else:
             print("Yanlış! Doğru Cevap :",ilksayi-ikincisayi)
+            skor = skor - 3
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
 
     elif a == 3:
@@ -45,9 +54,13 @@ while True:
 
         if (sonuc == ilksayi*ikincisayi):
             print("Tebrikler Doğru bildiniz!")
+            skor = skor + 1
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
         else:
             print("Yanlış! Doğru Cevap :", ilksayi*ikincisayi)
+            skor = skor - 3
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
 
     elif a == 4:
@@ -58,6 +71,11 @@ while True:
 
         if (sonuc == math.factorial(ilksayi)):
             print("Tebrikler bildiniz.")
+            skor = skor + 1
+            print("Mevcut skorunuz :", skor)
             time.sleep(2)
         else:
             print("Yanlış! Doğru Cevap :",math.factorial(ilksayi))
+            skor = skor - 3
+            print("Mevcut skorunuz :", skor)
+            time.sleep(2)
